@@ -1,0 +1,45 @@
+.userMenu {
+  display: block;
+  text-align: center;
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  padding-top: 20vh;
+  height: 50vh;
+  border-radius: 25px;
+  background-color: lightgrey;
+  font-family: "Roboto", sans-serif;
+}
+.userMenu h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.userMenu input {
+  width: 70%;
+  display: inline-block;
+  background-color: inherit;
+  color: black;
+  border: none;
+  padding: 5px;
+  font-weight: 500;
+}
+.userMenu input:focus {
+  border: none;
+  outline: none;
+}
+.userMenu button {
+  background-color: grey;
+  display: inline-block;
+  color: black;
+  font-size: large;
+  font-weight: 500;
+  border-radius: 25px;
+  width: 40%;
+}
+.userMenu p {
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: small;
+}
+
+/*# sourceMappingURL=main.css.map */
