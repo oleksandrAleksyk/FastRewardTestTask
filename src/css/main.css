@@ -42,4 +42,15 @@
   font-size: small;
 }
 
+.timers {
+  text-align: center;
+}
+.timers .timers--box {
+  display: inline-block;
+  margin: 30px;
+  background-color: lightgrey;
+  padding: 50px;
+  border-radius: 25px;
+}
+
 /*# sourceMappingURL=main.css.map */

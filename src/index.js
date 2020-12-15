@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import "./css/main.css"; 
 import firebase from 'firebase';
+import timer from "./timer-vector.png"; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyAXzxJLvYUnGg_WxzNiH8wTCbf9CPitsDw",
@@ -48,7 +49,7 @@ class LogInMenu extends React.Component{
     this.logInUser = this.logInUser.bind(this);
   }
   handleEmailChange(event){
-    this.setState({email:event.target.value});   
+    this.setState({email:event.target.value})  
   }
   handlePasswordChange(event){
     this.setState({password:event.target.value})
@@ -165,12 +166,25 @@ class Timers extends React.Component {
     }
   }
 
- 
+  generateNormalTimerView(time){
+    let minutes = Math.floor(time/60); 
+    let seconds = time-(minutes*60)
+    let hours = Math.floor(time/3600)
+    return(<h2>{hours+":"+minutes+":"+seconds}</h2>)
+  }
 
   render(){
-    return(<div>
-      <h2>{this.state.desktopLocal}</h2>
-      <h2>{this.state.mobileLocal}</h2>
+    return(<div class="timers">
+      <div class="timers--box">
+      <h2>Desktop</h2>
+      <img src={timer} />
+      {this.generateNormalTimerView(this.state.desktopLocal)}
+      </div>
+      <div class="timers--box">
+      <h2>Mobile</h2>
+      <img src={timer} />
+      {this.generateNormalTimerView(this.state.mobileLocal)}
+      </div>
     </div>)
   }
 }
